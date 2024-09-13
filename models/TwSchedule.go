@@ -7,8 +7,8 @@ import (
 
 type TwSchedule struct {
 	gorm.Model
-	ID                int       `json:"id"`
-	WorkspaceID       int       `json:"workspace_id"`
+	WorkspaceId       int       `json:"workspace_id" gorm:"index"`
+	BoardColumnId     int       `json:"board_column_id" gorm:"index"`
 	Title             string    `json:"title"`
 	Description       string    `json:"description"`
 	StartTime         time.Time `json:"start_time"`

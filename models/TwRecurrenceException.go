@@ -7,8 +7,7 @@ import (
 
 type TwRecurrenceException struct {
 	gorm.Model
-	ID            int       `json:"id"`
-	ScheduleID    int       `json:"schedule_id"`
+	ScheduleId    int       `json:"schedule_id" gorm:"index"`
 	ExceptionDate time.Time `json:"exception_date"`
 	NewStartTime  time.Time `json:"new_start_time"`
 	NewEndTime    time.Time `json:"new_end_time"`

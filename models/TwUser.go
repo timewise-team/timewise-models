@@ -7,7 +7,6 @@ import (
 
 type TwUser struct {
 	gorm.Model
-	ID                   int       `json:"id"`
 	FirstName            string    `json:"first_name"`
 	LastName             string    `json:"last_name"`
 	Email                string    `json:"email"`
@@ -23,8 +22,4 @@ type TwUser struct {
 	NotificationSettings string    `json:"notification_settings"`
 	CalendarSettings     string    `json:"calendar_settings"`
 	Role                 string    `json:"role"`
-}
-
-func (TwUser) TableName() string {
-	return "tw_user"
 }

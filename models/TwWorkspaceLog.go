@@ -4,7 +4,6 @@ import "github.com/jinzhu/gorm"
 
 type TwWorkspaceLog struct {
 	gorm.Model
-	ID          int    `json:"id"`
-	WorkspaceID int    `json:"workspace_id"`
+	WorkspaceId int    `json:"workspace_id" gorm:"index"`
 	Log         string `json:"log"`
 }
