@@ -1,12 +1,10 @@
 package models
 
 import (
-	"github.com/jinzhu/gorm"
 	"time"
 )
 
 type TwSchedule struct {
-	gorm.Model
 	ID                int       `json:"id"`
 	WorkspaceID       int       `json:"workspace_id"`
 	Title             string    `json:"title"`

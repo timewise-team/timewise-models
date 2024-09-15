@@ -1,12 +1,10 @@
 package models
 
 import (
-	"github.com/jinzhu/gorm"
 	"time"
 )
 
 type TwWorkspace struct {
-	gorm.Model
 	ID          int       `json:"id"`
 	Title       string    `json:"title"`
 	CreatedAt   time.Time `json:"created_at"`

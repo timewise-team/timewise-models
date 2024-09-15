@@ -1,12 +1,10 @@
 package models
 
 import (
-	"github.com/jinzhu/gorm"
 	"time"
 )
 
 type TwUser struct {
-	gorm.Model
 	ID                   int       `json:"id"`
 	FirstName            string    `json:"first_name"`
 	LastName             string    `json:"last_name"`
