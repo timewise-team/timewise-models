@@ -1,12 +1,11 @@
 package models
 
 import (
-	"github.com/jinzhu/gorm"
 	"time"
 )
 
 type TwRecurrenceException struct {
-	gorm.Model
+	ID            uint      `gorm:"primary_key"`
 	ScheduleId    int       `json:"schedule_id" gorm:"index"`
 	ExceptionDate time.Time `json:"exception_date"`
 	NewStartTime  time.Time `json:"new_start_time"`
