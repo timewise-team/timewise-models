@@ -5,9 +5,9 @@ import (
 )
 
 type TwScheduleParticipant struct {
-	ID               int       `json:"id"`
-	ScheduleID       int       `json:"schedule_id"`
-	UserID           int       `json:"user_id"`
+	ID               uint      `gorm:"primary_key"`
+	ScheduleId       int       `json:"schedule_id" gorm:"index"`
+	UserId           int       `json:"user_id" gorm:"index"`
 	Status           string    `json:"status"`
 	ResponseTime     time.Time `json:"response_time"`
 	Role             string    `json:"role"`

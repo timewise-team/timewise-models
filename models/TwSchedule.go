@@ -5,8 +5,9 @@ import (
 )
 
 type TwSchedule struct {
-	ID                int       `json:"id"`
-	WorkspaceID       int       `json:"workspace_id"`
+	ID                uint      `gorm:"primary_key"`
+	WorkspaceId       int       `json:"workspace_id" gorm:"index"`
+	BoardColumnId     int       `json:"board_column_id" gorm:"index"`
 	Title             string    `json:"title"`
 	Description       string    `json:"description"`
 	StartTime         time.Time `json:"start_time"`
