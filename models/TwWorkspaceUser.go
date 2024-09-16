@@ -1,9 +1,7 @@
 package models
 
-import "github.com/jinzhu/gorm"
-
 type TwWorkspaceUser struct {
-	gorm.Model
+	ID           uint   `gorm:"primary_key"`
 	UserId       int    `json:"user_id"`
 	WorkspaceId  int    `json:"workspace_id" gorm:"index"`
 	WorkspaceKey string `json:"workspace_key"`
