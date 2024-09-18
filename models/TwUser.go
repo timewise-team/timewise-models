@@ -6,7 +6,7 @@ import (
 
 type TwUser struct {
 	ID                   int       `gorm:"primary_key"`
-	Username             string    `gorm:"type:varchar(100)";unique_index`
+	Username             string    `gorm:"type:varchar(100)"`
 	FirstName            string    `gorm:"type:varchar(100)"`
 	LastName             string    `gorm:"type:varchar(100)"`
 	Email                string    `gorm:"type:varchar(255)"`
