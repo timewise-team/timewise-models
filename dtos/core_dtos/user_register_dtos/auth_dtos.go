@@ -1,4 +1,4 @@
-package core_dtos
+package user_register_dto
 
 type RegisterRequestDto struct {
 	UserName        string `json:"username"`
