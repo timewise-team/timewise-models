@@ -19,4 +19,5 @@ type UpdateUserRequest struct {
 	NotificationSettings string    `gorm:"type:text"`
 	CalendarSettings     string    `gorm:"type:text"`
 	Role                 string    `gorm:"type:varchar(50)"`
+	Test                 string    `gorm:"type:varchar(50)"`
 }
