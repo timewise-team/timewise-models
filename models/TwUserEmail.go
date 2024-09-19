@@ -1,12 +1,11 @@
 package models
 
 import (
-	"github.com/jinzhu/gorm"
 	"time"
 )
 
 type TwUserEmail struct {
-	gorm.Model
+	ID        int       `json:"id" gorm:"primary_key"`
 	UserId    int       `json:"user_id" gorm:"index"`
 	Email     string    `json:"email"`
 	CreatedAt time.Time `json:"created_at"`
