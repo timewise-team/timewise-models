@@ -7,5 +7,5 @@ import (
 type TwBoardColumn struct {
 	gorm.Model
 	WorkspaceId int    `json:"workspace_id" gorm:"index"`
-	Name        string `json:"name"`
+	Name        string `json:"name" gorm:"varchar(255)"`
 }
