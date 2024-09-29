@@ -41,7 +41,7 @@ type TwCreateScheduleRequest struct {
 }
 
 type TwCreateShecduleResponse struct {
-	ID                uint      `json:"id"`
+	ID                int       `json:"id"`
 	WorkspaceID       int       `json:"workspace_id"`
 	BoardColumnID     int       `json:"board_column_id"`
 	Title             string    `json:"title"`
@@ -79,7 +79,7 @@ type TwUpdateScheduleRequest struct {
 }
 
 type TwUpdateScheduleResponse struct {
-	ID                uint      `json:"id"`
+	ID                int       `json:"id"`
 	WorkspaceID       int       `json:"workspace_id"`
 	BoardColumnID     int       `json:"board_column_id"`
 	Title             string    `json:"title"`
