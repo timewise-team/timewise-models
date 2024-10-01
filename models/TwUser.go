@@ -8,7 +8,7 @@ type TwUser struct {
 	ID                   int       `gorm:"primary_key"`
 	CreatedAt            time.Time `json:"created_at"`
 	UpdatedAt            time.Time `json:"updated_at"`
-	DeletedAt            time.Time `json:"deleted_at"`
+	DeletedAt            time.Time `json:"deleted_at" gorm:"default:null"`
 	Username             string    `gorm:"type:varchar(100)"`
 	FirstName            string    `gorm:"type:varchar(100)"`
 	LastName             string    `gorm:"type:varchar(100)"`
