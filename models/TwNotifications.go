@@ -14,5 +14,5 @@ type TwNotifications struct {
 	RelatedItemId   int         `json:"related_item_id"`
 	RelatedItemType string      `json:"related_item_type"`
 	ExtraData       string      `json:"extra_data"`
-	UserEmail       TwUserEmail `gorm:"foreignkey:UserId;association_foreignkey:ID"`
+	UserEmail       TwUserEmail `gorm:"foreignkey:UserEmailId ;association_foreignkey:ID"`
 }
