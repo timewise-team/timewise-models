@@ -4,7 +4,7 @@ import "time"
 
 type TwNotifications struct {
 	ID              int         `gorm:"primary_key"`
-	UserId          int         `json:"user_id" gorm:"index"`
+	UserEmailId     int         `json:"user_email_id" gorm:"index"`
 	Type            string      `json:"type"`
 	Message         string      `json:"message"`
 	IsRead          bool        `json:"is_read"`
