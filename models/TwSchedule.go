@@ -16,7 +16,7 @@ type TwSchedule struct {
 	StartTime         time.Time     `json:"start_time"`
 	EndTime           time.Time     `json:"end_time"`
 	Location          string        `json:"location"`
-	CreatedBy         int           `json:"created_by"`
+	CreatedBy         int           `json:"created_by" gorm:"index"`
 	Status            string        `json:"status"`
 	AllDay            bool          `json:"all_day"`
 	Visibility        string        `json:"visibility"`
@@ -27,4 +27,5 @@ type TwSchedule struct {
 	AssignedTo        int           `json:"assigned_to"`
 	Workspace         TwWorkspace   `gorm:"foreignkey:WorkspaceId;association_foreignkey:ID"`
 	BoardColumn       TwBoardColumn `gorm:"foreignkey:BoardColumnId;association_foreignkey:ID"`
+	CreatedUser       TwUserEmail   `gorm:"foreignkey:CreatedBy;association_foreignkey:ID"`
 }
