@@ -12,8 +12,12 @@ type TwScheduleParticipant struct {
 	ScheduleId       int             `json:"schedule_id" gorm:"index"`
 	WorkspaceUserId  int             `json:"workspace_user_id" gorm:"index"`
 	Status           string          `json:"status"`
+	AssignAt         time.Time       `json:"assign_at"`
+	AssignBy         int             `json:"assign_by"`
 	ResponseTime     time.Time       `json:"response_time"`
 	InvitationSentAt time.Time       `json:"invitation_sent_at"`
+	InvitationStatus string          `json:"invitation_status"`
 	Schedule         TwSchedule      `gorm:"foreignkey:ScheduleId;association_foreignkey:ID"`
 	WorkspaceUser    TwWorkspaceUser `gorm:"foreignkey:WorkspaceUserId;association_foreignkey:ID"`
+	AssignByUser     TwWorkspaceUser `gorm:"foreignkey:AssignBy;association_foreignkey:ID"`
 }
