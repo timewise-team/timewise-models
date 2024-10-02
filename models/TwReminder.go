@@ -1,12 +1,14 @@
 package models
 
 import (
-	"github.com/jinzhu/gorm"
 	"time"
 )
 
 type TwReminder struct {
-	gorm.Model
+	ID           int       `gorm:"primary_key"`
+	CreatedAt    time.Time `json:"created_at"`
+	UpdatedAt    time.Time `json:"updated_at"`
+	DeletedAt    time.Time `json:"deleted_at"`
 	ScheduleId   int       `json:"schedule_id" gorm:"index"`
 	ReminderTime time.Time `json:"reminder_time"`
 	Method       string    `json:"method"`

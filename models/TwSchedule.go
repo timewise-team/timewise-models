@@ -5,7 +5,10 @@ import (
 )
 
 type TwSchedule struct {
-	ID                uint      `gorm:"primary_key"`
+	ID                int       `gorm:"primary_key"`
+	CreatedAt         time.Time `json:"created_at"`
+	UpdatedAt         time.Time `json:"updated_at"`
+	DeletedAt         time.Time `json:"deleted_at"`
 	WorkspaceId       int       `json:"workspace_id" gorm:"index"`
 	BoardColumnId     int       `json:"board_column_id" gorm:"index"`
 	Title             string    `json:"title"`
@@ -14,8 +17,6 @@ type TwSchedule struct {
 	EndTime           time.Time `json:"end_time"`
 	Location          string    `json:"location"`
 	CreatedBy         int       `json:"created_by"`
-	CreatedAt         time.Time `json:"created_at"`
-	UpdatedAt         time.Time `json:"updated_at"`
 	Status            string    `json:"status"`
 	AllDay            bool      `json:"all_day"`
 	Visibility        string    `json:"visibility"`
