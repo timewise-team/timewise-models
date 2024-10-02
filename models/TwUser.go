@@ -6,6 +6,9 @@ import (
 
 type TwUser struct {
 	ID                   int       `gorm:"primary_key"`
+	CreatedAt            time.Time `json:"created_at"`
+	UpdatedAt            time.Time `json:"updated_at"`
+	DeletedAt            time.Time `json:"deleted_at" gorm:"default:null"`
 	Username             string    `gorm:"type:varchar(100)"`
 	FirstName            string    `gorm:"type:varchar(100)"`
 	LastName             string    `gorm:"type:varchar(100)"`
@@ -16,8 +19,6 @@ type TwUser struct {
 	Locale               string    `gorm:"type:varchar(10)"`
 	IsVerified           bool      `gorm:"type:tinyint(1)"`
 	IsActive             bool      `gorm:"type:tinyint(1)"`
-	CreatedAt            time.Time `gorm:"type:datetime"`
-	UpdatedAt            time.Time `gorm:"type:datetime"`
 	LastLoginAt          time.Time `gorm:"type:datetime"`
 	NotificationSettings string    `gorm:"type:text"`
 	CalendarSettings     string    `gorm:"type:text"`

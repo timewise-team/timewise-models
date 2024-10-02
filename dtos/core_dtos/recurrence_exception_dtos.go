@@ -3,7 +3,7 @@ package core_dtos
 import "time"
 
 type TwRecurrenceExceptionResponseDTO struct {
-	ID            uint      `json:"id"`
+	ID            int       `json:"id"`
 	ScheduleId    int       `json:"schedule_id"`
 	ExceptionDate time.Time `json:"exception_date"`
 	NewStartTime  time.Time `json:"new_start_time"`
@@ -32,7 +32,7 @@ type TwRecurrenceExceptionUpdateDTO struct {
 }
 
 type TwRecurrenceExceptionActionResponseDTO struct {
-	ID            uint      `json:"id"`
+	ID            int       `json:"id"`
 	ScheduleId    int       `json:"schedule_id"`
 	ExceptionDate time.Time `json:"exception_date"`
 	NewStartTime  time.Time `json:"new_start_time"`
