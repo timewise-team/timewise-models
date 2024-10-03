@@ -15,6 +15,7 @@ type TwUser struct {
 	ProfilePicture       string    `gorm:"type:varchar(255)"`
 	Timezone             string    `gorm:"type:varchar(100)"`
 	Locale               string    `gorm:"type:varchar(10)"`
+	GoogleId             string    `gorm:"type:varchar(255)"`
 	IsVerified           bool      `gorm:"type:tinyint(1)"`
 	IsActive             bool      `gorm:"type:tinyint(1)"`
 	LastLoginAt          time.Time `gorm:"type:datetime"`
