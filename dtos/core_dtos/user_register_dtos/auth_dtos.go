@@ -20,9 +20,13 @@ type RegisterResponseDto struct {
 
 type GetOrCreateUserRequestDto struct {
 	Email          string `json:"email"`
-	UserName       string `json:"username"`
 	FullName       string `json:"full_name"`
 	ProfilePicture string `json:"profile_picture"`
+	VerifiedEmail  bool   `json:"verified_email"`
+	GivenName      string `json:"given_name"`
+	FamilyName     string `json:"family_name"`
+	Locale         string `json:"locale"`
+	GoogleId       string `json:"google_id"`
 }
 
 type GetOrCreateUserResponseDto struct {
