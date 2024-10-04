@@ -20,7 +20,7 @@ type TwScheduleResponse struct {
 	ExtraData         string    `json:"extra_data"`
 	IsDeleted         bool      `json:"is_deleted"`
 	RecurrencePattern string    `json:"recurrence_pattern"`
-	AssignedTo        []int     `json:"assigned_to"`
+	AssignedTo        uint64    `json:"assigned_to"`
 }
 
 type TwCreateScheduleRequest struct {
