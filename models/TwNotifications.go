@@ -10,7 +10,7 @@ type TwNotifications struct {
 	IsRead          bool        `json:"is_read"`
 	CreatedAt       time.Time   `json:"created_at"`
 	UpdatedAt       time.Time   `json:"updated_at"`
-	DeletedAt       time.Time   `json:"deleted_at" gorm:"default:null"`
+	DeletedAt       *time.Time  `json:"deleted_at" gorm:"default:null"`
 	RelatedItemId   int         `json:"related_item_id"`
 	RelatedItemType string      `json:"related_item_type"`
 	ExtraData       string      `json:"extra_data"`
