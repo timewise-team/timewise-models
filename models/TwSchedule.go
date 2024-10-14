@@ -13,8 +13,8 @@ type TwSchedule struct {
 	BoardColumnId     int             `json:"board_column_id" gorm:"index"`
 	Title             string          `json:"title"`
 	Description       string          `json:"description"`
-	StartTime         time.Time       `json:"start_time"`
-	EndTime           time.Time       `json:"end_time"`
+	StartTime         time.Time       `json:"start_time" gorm:"default:null"`
+	EndTime           time.Time       `json:"end_time" gorm:"default:null"`
 	Location          string          `json:"location"`
 	CreatedBy         int             `json:"workspace_user_id" gorm:"index"`
 	Status            string          `json:"status"`
