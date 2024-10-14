@@ -1,6 +1,9 @@
 package core_dtos
 
-import "time"
+import (
+	"github.com/timewise-team/timewise-models/dtos/core_dtos/workspace_user_dtos"
+	"time"
+)
 
 type TwScheduleResponse struct {
 	ID                int       `json:"id"`
@@ -104,4 +107,28 @@ type TwUpdateScheduleResponse struct {
 	IsDeleted         bool      `json:"is_deleted"`
 	RecurrencePattern string    `json:"recurrence_pattern"`
 	//AssignedTo        int       `json:"assigned_to"`
+}
+
+type TwScheduleListInBoardColumnResponse struct {
+	ID                   int                                                `json:"id"`
+	WorkspaceID          int                                                `json:"workspace_id"`
+	BoardColumnID        int                                                `json:"board_column_id"`
+	Title                string                                             `json:"title"`
+	Description          string                                             `json:"description"`
+	StartTime            time.Time                                          `json:"start_time"`
+	EndTime              time.Time                                          `json:"end_time"`
+	Location             string                                             `json:"location"`
+	CreatedBy            int                                                `json:"created_by"`
+	CreatedAt            time.Time                                          `json:"created_at"`
+	UpdatedAt            time.Time                                          `json:"updated_at"`
+	Status               string                                             `json:"status"`
+	AllDay               bool                                               `json:"all_day"`
+	Visibility           string                                             `json:"visibility"`
+	VideoTranscript      string                                             `json:"video_transcript"`
+	ExtraData            string                                             `json:"extra_data,omitempty"`
+	IsDeleted            bool                                               `json:"is_deleted"`
+	RecurrencePattern    string                                             `json:"recurrence_pattern"`
+	ScheduleParticipants []workspace_user_dtos.GetWorkspaceUserListResponse `json:"schedule_participants"`
+	Documents            int                                                `json:"documents_count"`
+	Comments             int                                                `json:"comments_count"`
 }
