@@ -84,7 +84,6 @@ type TwUpdateScheduleRequest struct {
 	ExtraData         *string    `json:"extra_data,omitempty"`
 	IsDeleted         *bool      `json:"is_deleted,omitempty"`
 	RecurrencePattern *string    `json:"recurrence_pattern,omitempty"`
-	//AssignedTo        *int       `json:"assigned_to,omitempty"`
 }
 
 type TwUpdateScheduleResponse struct {
