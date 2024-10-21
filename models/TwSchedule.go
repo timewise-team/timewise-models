@@ -24,6 +24,8 @@ type TwSchedule struct {
 	ExtraData         string          `json:"extra_data"`
 	IsDeleted         bool            `json:"is_deleted"`
 	RecurrencePattern string          `json:"recurrence_pattern"`
+	Position          int             `json:"position"`
+	Priority          string          `json:"priority"`
 	Workspace         TwWorkspace     `gorm:"foreignkey:WorkspaceId;association_foreignkey:ID"`
 	BoardColumn       TwBoardColumn   `gorm:"foreignkey:BoardColumnId;association_foreignkey:ID"`
 	WorkspaceUser     TwWorkspaceUser `gorm:"foreignkey:CreatedBy;association_foreignkey:ID"`
