@@ -24,6 +24,8 @@ type TwScheduleResponse struct {
 	ExtraData         string    `json:"extra_data"`
 	IsDeleted         bool      `json:"is_deleted"`
 	RecurrencePattern string    `json:"recurrence_pattern"`
+	Position          int       `json:"position"`
+	Priority          string    `json:"priority"`
 	//AssignedTo        []int     `json:"assigned_to"`
 }
 
@@ -43,29 +45,16 @@ type TwCreateScheduleRequest struct {
 	VideoTranscript   *string    `json:"video_transcript"`             // Nullable field
 	ExtraData         *string    `json:"extra_data,omitempty"`         // Nullable field
 	RecurrencePattern *string    `json:"recurrence_pattern,omitempty"` // Nullable field
-	//AssignedTo        *int       `json:"assigned_to,omitempty"`        // Nullable field
+	Position          int        `json:"position,omitempty"`
+	Priority          string     `json:"priority,omitempty"`
 }
 
 type TwCreateShecduleResponse struct {
-	ID                int       `json:"id"`
-	WorkspaceID       int       `json:"workspace_id"`
-	BoardColumnID     int       `json:"board_column_id"`
-	Title             string    `json:"title"`
-	Description       string    `json:"description"`
-	StartTime         time.Time `json:"start_time"`
-	EndTime           time.Time `json:"end_time"`
-	Location          string    `json:"location"`
-	CreatedBy         int       `json:"created_by"`
-	CreatedAt         time.Time `json:"created_at"`
-	UpdatedAt         time.Time `json:"updated_at"`
-	Status            string    `json:"status"`
-	AllDay            bool      `json:"all_day"`
-	Visibility        string    `json:"visibility"`
-	VideoTranscript   string    `json:"video_transcript"`
-	ExtraData         string    `json:"extra_data,omitempty"`
-	IsDeleted         bool      `json:"is_deleted"`
-	RecurrencePattern string    `json:"recurrence_pattern"`
-	//AssignedTo        int       `json:"assigned_to"`
+	ID            int    `json:"id"`
+	WorkspaceID   int    `json:"workspace_id"`
+	BoardColumnID int    `json:"board_column_id"`
+	Title         string `json:"title"`
+	Position      int    `json:"position"`
 }
 
 type TwUpdateScheduleRequest struct {
@@ -84,6 +73,8 @@ type TwUpdateScheduleRequest struct {
 	ExtraData         *string    `json:"extra_data,omitempty"`
 	IsDeleted         *bool      `json:"is_deleted,omitempty"`
 	RecurrencePattern *string    `json:"recurrence_pattern,omitempty"`
+	Position          *int       `json:"position,omitempty"`
+	Priority          *string    `json:"priority,omitempty"`
 }
 
 type TwUpdateScheduleResponse struct {
@@ -105,7 +96,8 @@ type TwUpdateScheduleResponse struct {
 	ExtraData         string    `json:"extra_data,omitempty"`
 	IsDeleted         bool      `json:"is_deleted"`
 	RecurrencePattern string    `json:"recurrence_pattern"`
-	//AssignedTo        int       `json:"assigned_to"`
+	Position          int       `json:"position"`
+	Priority          string    `json:"priority"`
 }
 
 type TwScheduleListInBoardColumnResponse struct {
