@@ -30,5 +30,4 @@ type ScheduleParticipantResponse struct {
 	ResponseTime     string `json:"response_time"`
 	InvitationSentAt string `json:"invitation_sent_at"`
 	InvitationStatus string `json:"invitation_status"`
-	Role             string `json:"role"`
 }
