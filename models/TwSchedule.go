@@ -6,15 +6,15 @@ import (
 
 type TwSchedule struct {
 	ID                int             `gorm:"primary_key"`
-	CreatedAt         time.Time       `json:"created_at"`
-	UpdatedAt         time.Time       `json:"updated_at"`
-	DeletedAt         time.Time       `json:"deleted_at" gorm:"default:null"`
+	CreatedAt         *time.Time      `json:"created_at"`
+	UpdatedAt         *time.Time      `json:"updated_at"`
+	DeletedAt         *time.Time      `json:"deleted_at" gorm:"default:null"`
 	WorkspaceId       int             `json:"workspace_id" gorm:"index"`
 	BoardColumnId     int             `json:"board_column_id" gorm:"index"`
 	Title             string          `json:"title"`
 	Description       string          `json:"description"`
-	StartTime         time.Time       `json:"start_time" gorm:"default:null"`
-	EndTime           time.Time       `json:"end_time" gorm:"default:null"`
+	StartTime         *time.Time      `json:"start_time" gorm:"default:null"`
+	EndTime           *time.Time      `json:"end_time" gorm:"default:null"`
 	Location          string          `json:"location"`
 	CreatedBy         int             `json:"workspace_user_id" gorm:"index"`
 	Status            string          `json:"status"`
