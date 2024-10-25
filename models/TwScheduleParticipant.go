@@ -8,7 +8,7 @@ type TwScheduleParticipant struct {
 	ID               int             `gorm:"primary_key"`
 	CreatedAt        time.Time       `json:"created_at" gorm:"default:null"`
 	UpdatedAt        time.Time       `json:"updated_at" gorm:"default:null"`
-	DeletedAt        time.Time       `json:"deleted_at" gorm:"default:null"`
+	DeletedAt        *time.Time      `json:"deleted_at" gorm:"default:null"`
 	ScheduleId       int             `json:"schedule_id" gorm:"index"`
 	WorkspaceUserId  int             `json:"workspace_user_id" gorm:"index"`
 	Status           string          `json:"status"`
