@@ -20,3 +20,21 @@ type TwCommentResponse struct {
 	LastName            string    `json:"last_name"`
 	ProfilePicture      string    `json:"profile_picture"`
 }
+
+type CommentRequestDTO struct {
+	ScheduleId      *int    `json:"schedule_id"`
+	WorkspaceUserId *int    `json:"workspace_user_id"`
+	Commenter       *string `json:"commenter"`
+	Content         *string `json:"content"`
+}
+
+type CommentResponseDTO struct {
+	ID              int        `gorm:"primary_key"`
+	CreatedAt       *time.Time `json:"created_at"`
+	UpdatedAt       *time.Time `json:"updated_at"`
+	ScheduleId      int        `json:"schedule_id"`
+	WorkspaceUserId int        `json:"workspace_user_id"`
+	Commenter       string     `json:"commenter"`
+	Content         string     `json:"content"`
+	IsDeleted       bool       `json:"is_deleted"`
+}
