@@ -119,6 +119,8 @@ type TwScheduleListInBoardColumnResponse struct {
 	ExtraData            string                                              `json:"extra_data,omitempty"`
 	IsDeleted            bool                                                `json:"is_deleted"`
 	RecurrencePattern    string                                              `json:"recurrence_pattern"`
+	Position             int                                                 `json:"position"`
+	Priority             string                                              `json:"priority"`
 	ScheduleParticipants []schedule_participant_dtos.ScheduleParticipantInfo `json:"schedule_participants"`
 	Documents            int                                                 `json:"documents_count"`
 	Comments             int                                                 `json:"comments_count"`
