@@ -22,10 +22,9 @@ type TwCommentResponse struct {
 }
 
 type CommentRequestDTO struct {
-	ScheduleId      *int    `json:"schedule_id"`
-	WorkspaceUserId *int    `json:"workspace_user_id"`
-	Commenter       *string `json:"commenter"`
-	Content         *string `json:"content"`
+	ScheduleId *int    `json:"schedule_id"`
+	Commenter  *string `json:"commenter"`
+	Content    *string `json:"content"`
 }
 
 type CommentResponseDTO struct {
