@@ -60,7 +60,6 @@ type TwCreateShecduleResponse struct {
 type TwUpdateScheduleRequest struct {
 	WorkspaceID       *int       `json:"workspace_id,omitempty"`
 	BoardColumnID     *int       `json:"board_column_id,omitempty"`
-	WorkspaceUserID   *int       `json:"workspace_user_id,omitempty"`
 	Title             *string    `json:"title,omitempty"`
 	Description       *string    `json:"description,omitempty"`
 	StartTime         *time.Time `json:"start_time,omitempty"`
@@ -71,7 +70,6 @@ type TwUpdateScheduleRequest struct {
 	Visibility        *string    `json:"visibility,omitempty"`
 	VideoTranscript   *string    `json:"video_transcript"`
 	ExtraData         *string    `json:"extra_data,omitempty"`
-	IsDeleted         *bool      `json:"is_deleted,omitempty"`
 	RecurrencePattern *string    `json:"recurrence_pattern,omitempty"`
 	Position          *int       `json:"position,omitempty"`
 	Priority          *string    `json:"priority,omitempty"`
