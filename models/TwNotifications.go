@@ -15,4 +15,5 @@ type TwNotifications struct {
 	RelatedItemType string      `json:"related_item_type"`
 	ExtraData       string      `json:"extra_data"`
 	UserEmail       TwUserEmail `gorm:"foreignkey:UserEmailId ;association_foreignkey:ID"`
+	IsSent          bool        `json:"is_sent" gorm:"default:false"`
 }
