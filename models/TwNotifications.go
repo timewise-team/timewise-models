@@ -16,5 +16,5 @@ type TwNotifications struct {
 	ExtraData       string      `json:"extra_data"`
 	UserEmail       TwUserEmail `gorm:"foreignkey:UserEmailId ;association_foreignkey:ID"`
 	IsSent          bool        `json:"is_sent" gorm:"default:false"`
-	NotifiedAt      *time.Time  `json:"notified_at" gorm:"default:now()"`
+	NotifiedAt      *time.Time  `json:"notified_at" gorm:"default:CURRENT_TIMESTAMP(3)"`
 }
