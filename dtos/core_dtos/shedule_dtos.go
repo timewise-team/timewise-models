@@ -30,23 +30,10 @@ type TwScheduleResponse struct {
 }
 
 type TwCreateScheduleRequest struct {
-	WorkspaceID       *int       `json:"workspace_id,omitempty"`    // Nullable field
-	BoardColumnID     *int       `json:"board_column_id,omitempty"` // Nullable field
-	WorkspaceUserID   *int       `json:"workspace_user_id,omitempty"`
-	Title             *string    `json:"title,omitempty"`              // Nullable field
-	Description       *string    `json:"description,omitempty"`        // Nullable field
-	StartTime         *time.Time `json:"start_time,omitempty"`         // Nullable field
-	EndTime           *time.Time `json:"end_time,omitempty"`           // Nullable field
-	Location          *string    `json:"location,omitempty"`           // Nullable field
-	CreatedBy         int        `json:"created_by"`                   // Required field
-	Status            *string    `json:"status,omitempty"`             // Nullable field
-	AllDay            *bool      `json:"all_day,omitempty"`            // Nullable field (represented by tinyint in SQL)
-	Visibility        *string    `json:"visibility,omitempty"`         // Nullable field
-	VideoTranscript   *string    `json:"video_transcript"`             // Nullable field
-	ExtraData         *string    `json:"extra_data,omitempty"`         // Nullable field
-	RecurrencePattern *string    `json:"recurrence_pattern,omitempty"` // Nullable field
-	Position          int        `json:"position,omitempty"`
-	Priority          string     `json:"priority,omitempty"`
+	WorkspaceID   *int    `json:"workspace_id,omitempty"`    // Nullable field
+	BoardColumnID *int    `json:"board_column_id,omitempty"` // Nullable field
+	Title         *string `json:"title,omitempty"`           // Nullable field
+	Description   *string `json:"description,omitempty"`     // Nullable field
 }
 
 type TwCreateShecduleResponse struct {
@@ -54,6 +41,7 @@ type TwCreateShecduleResponse struct {
 	WorkspaceID   int    `json:"workspace_id"`
 	BoardColumnID int    `json:"board_column_id"`
 	Title         string `json:"title"`
+	Description   string `json:"description"`
 	Position      int    `json:"position"`
 }
 
