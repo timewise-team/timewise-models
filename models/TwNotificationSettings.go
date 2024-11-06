@@ -14,4 +14,5 @@ type TwNotificationSettings struct {
 	DeletedAt                    time.Time `json:"deleted_at" gorm:"default:null"`
 	ExtraData                    string    `json:"extra_data"`
 	User                         TwUser    `gorm:"foreignkey:UserId;association_foreignkey:ID"`
+	NotificationOnEmail          bool      `json:"notification_on_email"`
 }
