@@ -23,3 +23,13 @@ type TwDocumentResponse struct {
 	LastName            string `json:"last_name"`
 	ProfilePicture      string `json:"profile_picture"`
 }
+
+type TwUploadDocumentRequest struct {
+	FileName    string `json:"file_name"`
+	FilePath    string `json:"file_path"`
+	FileSize    int    `json:"file_size"`
+	FileType    string `json:"file_type"`
+	ScheduleId  int    `json:"schedule_id"`
+	UploadedBy  int    `json:"workspace_user_id"`
+	DownloadUrl string `json:"download_url"`
+}
