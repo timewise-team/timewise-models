@@ -30,10 +30,11 @@ type TwScheduleResponse struct {
 }
 
 type TwCreateScheduleRequest struct {
-	WorkspaceID   *int    `json:"workspace_id,omitempty"`    // Nullable field
-	BoardColumnID *int    `json:"board_column_id,omitempty"` // Nullable field
-	Title         *string `json:"title,omitempty"`           // Nullable field
-	Description   *string `json:"description,omitempty"`     // Nullable field
+	WorkspaceID     *int    `json:"workspace_id,omitempty"`    // Nullable field
+	BoardColumnID   *int    `json:"board_column_id,omitempty"` // Nullable field
+	WorkspaceUserID *int    `json:"workspace_user_id,omitempty"`
+	Title           *string `json:"title,omitempty"`       // Nullable field
+	Description     *string `json:"description,omitempty"` // Nullable field
 }
 
 type TwCreateShecduleResponse struct {
