@@ -30,27 +30,27 @@ type TwScheduleResponse struct {
 }
 
 type TwGetScheduleResponse struct {
-	ID                int     `json:"id"`
-	WorkspaceID       int     `json:"workspace_id"`
-	BoardColumnID     int     `json:"board_column_id"`
-	Title             string  `json:"title"`
-	Description       string  `json:"description"`
-	StartTime         string  `json:"start_time"`
-	EndTime           string  `json:"end_time"`
-	Location          string  `json:"location"`
-	CreatedBy         int     `json:"created_by"`
-	CreatedAt         string  `json:"created_at"`
-	UpdatedAt         string  `json:"updated_at"`
-	Status            string  `json:"status"`
-	AllDay            bool    `json:"all_day"`
-	Visibility        string  `json:"visibility"`
-	VideoTranscript   *string `json:"video_transcript"`
-	ExtraData         string  `json:"extra_data"`
-	IsDeleted         bool    `json:"is_deleted"`
-	RecurrencePattern string  `json:"recurrence_pattern"`
-	Position          int     `json:"position"`
-	Priority          string  `json:"priority"`
-	//AssignedTo        []int     `json:"assigned_to"`
+	ID                int    `gorm:"primary_key"`
+	CreatedAt         string `json:"created_at"`
+	UpdatedAt         string `json:"updated_at"`
+	DeletedAt         string `json:"deleted_at" gorm:"default:null"`
+	WorkspaceId       int    `json:"workspace_id" gorm:"index"`
+	BoardColumnId     int    `json:"board_column_id" gorm:"index"`
+	Title             string `json:"title"`
+	Description       string `json:"description"`
+	StartTime         string `json:"start_time" gorm:"default:null"`
+	EndTime           string `json:"end_time" gorm:"default:null"`
+	Location          string `json:"location"`
+	CreatedBy         int    `json:"workspace_user_id" gorm:"index"`
+	Status            string `json:"status"`
+	AllDay            bool   `json:"all_day"`
+	Visibility        string `json:"visibility"`
+	VideoTranscript   string `json:"video_transcript"`
+	ExtraData         string `json:"extra_data"`
+	IsDeleted         bool   `json:"is_deleted"`
+	RecurrencePattern string `json:"recurrence_pattern"`
+	Position          int    `json:"position"`
+	Priority          string `json:"priority"`
 }
 
 type TwCreateScheduleRequest struct {
