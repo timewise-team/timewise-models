@@ -30,7 +30,7 @@ type TwScheduleResponse struct {
 }
 
 type TwGetScheduleResponse struct {
-	ID                int    `gorm:"primary_key"`
+	ID                int    `json:"id"`
 	CreatedAt         string `json:"created_at"`
 	UpdatedAt         string `json:"updated_at"`
 	DeletedAt         string `json:"deleted_at" gorm:"default:null"`
@@ -114,6 +114,29 @@ type TwUpdateScheduleResponse struct {
 	RecurrencePattern string    `json:"recurrence_pattern"`
 	Position          int       `json:"position"`
 	Priority          string    `json:"priority"`
+}
+
+type TwUpdateScheduleTimeResponse struct {
+	ID                int    `json:"id"`
+	WorkspaceID       int    `json:"workspace_id"`
+	BoardColumnID     int    `json:"board_column_id"`
+	Title             string `json:"title"`
+	Description       string `json:"description"`
+	StartTime         string `json:"start_time"`
+	EndTime           string `json:"end_time"`
+	Location          string `json:"location"`
+	CreatedBy         int    `json:"created_by"`
+	CreatedAt         string `json:"created_at"`
+	UpdatedAt         string `json:"updated_at"`
+	Status            string `json:"status"`
+	AllDay            bool   `json:"all_day"`
+	Visibility        string `json:"visibility"`
+	VideoTranscript   string `json:"video_transcript"`
+	ExtraData         string `json:"extra_data,omitempty"`
+	IsDeleted         bool   `json:"is_deleted"`
+	RecurrencePattern string `json:"recurrence_pattern"`
+	Position          int    `json:"position"`
+	Priority          string `json:"priority"`
 }
 
 type TwScheduleListInBoardColumnResponse struct {
