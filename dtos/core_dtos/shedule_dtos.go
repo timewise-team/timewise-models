@@ -49,17 +49,17 @@ type TwCreateShecduleResponse struct {
 type TwUpdateScheduleRequest struct {
 	WorkspaceID *int `json:"workspace_id,omitempty"`
 	//BoardColumnID     *int       `json:"board_column_id,omitempty"`
-	Title             *string    `json:"title,omitempty"`
-	Description       *string    `json:"description,omitempty"`
-	StartTime         *time.Time `json:"start_time,omitempty"`
-	EndTime           *time.Time `json:"end_time,omitempty"`
-	Location          *string    `json:"location,omitempty"`
-	Status            *string    `json:"status,omitempty"`
-	AllDay            *bool      `json:"all_day,omitempty"`
-	Visibility        *string    `json:"visibility,omitempty"`
-	VideoTranscript   *string    `json:"video_transcript"`
-	ExtraData         *string    `json:"extra_data,omitempty"`
-	RecurrencePattern *string    `json:"recurrence_pattern,omitempty"`
+	Title             *string `json:"title,omitempty"`
+	Description       *string `json:"description,omitempty"`
+	StartTime         *string `json:"start_time,omitempty"`
+	EndTime           *string `json:"end_time,omitempty"`
+	Location          *string `json:"location,omitempty"`
+	Status            *string `json:"status,omitempty"`
+	AllDay            *bool   `json:"all_day,omitempty"`
+	Visibility        *string `json:"visibility,omitempty"`
+	VideoTranscript   *string `json:"video_transcript"`
+	ExtraData         *string `json:"extra_data,omitempty"`
+	RecurrencePattern *string `json:"recurrence_pattern,omitempty"`
 	//Position          *int       `json:"position,omitempty"`
 	Priority *string `json:"priority,omitempty"`
 }
