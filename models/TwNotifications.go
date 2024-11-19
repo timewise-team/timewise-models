@@ -6,6 +6,9 @@ type TwNotifications struct {
 	ID              int         `gorm:"primary_key"`
 	UserEmailId     int         `json:"user_email_id" gorm:"index"`
 	Type            string      `json:"type"`
+	Title           string      `json:"title"`
+	Description     string      `json:"description"`
+	Link            string      `json:"link"`
 	Message         string      `json:"message"`
 	IsRead          bool        `json:"is_read"`
 	CreatedAt       time.Time   `json:"created_at"`
