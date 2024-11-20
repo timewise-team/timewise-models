@@ -23,6 +23,7 @@ type GetUserResponseDto struct {
 }
 
 type EmailDto struct {
+	ID     int    `json:"id"`
 	Email  string `json:"email"`
 	Status string `json:"status"`
 }
