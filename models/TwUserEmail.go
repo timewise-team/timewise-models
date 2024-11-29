@@ -13,5 +13,6 @@ type TwUserEmail struct {
 	Email      string     `json:"email"`
 	Status     *string    `json:"status"`
 	IsLinkedTo *int       `json:"is_linked_to"`
+	ExpiresAt  *time.Time `json:"expires_at"`
 	User       TwUser     `gorm:"foreignkey:UserId;association_foreignkey:ID"`
 }
