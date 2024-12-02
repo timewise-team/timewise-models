@@ -7,6 +7,10 @@ type InviteToScheduleRequest struct {
 	ScheduleId int    `json:"schedule_id"`
 }
 
+type RemoveMemberRequest struct {
+	ScheduleId int `json:"schedule_id"`
+}
+
 type ScheduleParticipantRequest struct {
 	Status           *string    `json:"status"`
 	AssignAt         *time.Time `json:"assign_at" gorm:"default:null"`
