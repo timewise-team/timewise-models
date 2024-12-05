@@ -59,15 +59,19 @@ type TwCreateScheduleRequest struct {
 	BoardColumnID   *int    `json:"board_column_id,omitempty"` // Nullable field
 	Title           *string `json:"title,omitempty"`           // Nullable field
 	Description     *string `json:"description,omitempty"`     // Nullable field
+	StartTime       *string `json:"start_time,omitempty"`
+	EndTime         *string `json:"end_time,omitempty"`
 }
 
 type TwCreateShecduleResponse struct {
-	ID            int    `json:"id"`
-	WorkspaceID   int    `json:"workspace_id"`
-	BoardColumnID int    `json:"board_column_id"`
-	Title         string `json:"title"`
-	Description   string `json:"description"`
-	Position      int    `json:"position"`
+	ID            int       `json:"id"`
+	WorkspaceID   int       `json:"workspace_id"`
+	BoardColumnID int       `json:"board_column_id"`
+	Title         string    `json:"title"`
+	Description   string    `json:"description"`
+	Position      int       `json:"position"`
+	StartTime     time.Time `json:"start_time"`
+	EndTime       time.Time `json:"end_time"`
 }
 
 type TwUpdateScheduleRequest struct {
